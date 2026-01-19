@@ -12,10 +12,10 @@ body {
 header, footer {
   background: #222;
   color: #fff;
-  padding: 20px;
+  padding: 20px 0;
 }
 
-header nav a, footer a {
+header nav a {
   color: #fff;
   margin-right: 15px;
   text-decoration: none;
@@ -50,14 +50,15 @@ header nav a, footer a {
 
 .card img {
   width: 100%;
-  height: auto;
 }
 
 form {
   max-width: 500px;
 }
 
-form input, form textarea, form button {
+form input,
+form textarea,
+form button {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -71,6 +72,6 @@ form button {
 }
 
 footer {
-  margin-top: 60px;
   text-align: center;
+  margin-top: 60px;
 }
