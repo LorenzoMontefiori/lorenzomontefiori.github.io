@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <title>Home</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<header>
-  <div class="container">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="chi-siamo.html">Chi siamo</a>
-      <a href="bnb.html">B&B</a>
-      <a href="contatti.html">Contatti</a>
-    </nav>
-  </div>
-</header>
+---
+layout: default
+title: Home
+---
 
 <section class="hero">
   <div class="container">
@@ -31,17 +16,17 @@
 
     <div class="cards">
       <div class="card">
-        <img src="img/bnb1.jpg" alt="B&B Centro">
+        <img src="/img/bnb1.jpg" alt="B&B Centro">
         <h3>B&B Centro</h3>
       </div>
 
       <div class="card">
-        <img src="img/bnb2.jpg" alt="B&B Mare">
+        <img src="/img/bnb2.jpg" alt="B&B Mare">
         <h3>B&B Mare</h3>
       </div>
 
       <div class="card">
-        <img src="img/bnb3.jpg" alt="B&B Collina">
+        <img src="/img/bnb3.jpg" alt="B&B Collina">
         <h3>B&B Collina</h3>
       </div>
     </div>
@@ -60,12 +45,3 @@
     </form>
   </div>
 </section>
-
-<footer>
-  <div class="container">
-    <p>© 2026 - Tutti i diritti riservati</p>
-  </div>
-</footer>
-
-</body>
-</html>
