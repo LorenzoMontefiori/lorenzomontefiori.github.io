@@ -2,10 +2,70 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Il mio sito</title>
+  <title>Home</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Ciao mondo!</h1>
-  <p>Questo è il mio primo sito online 🎉</p>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="chi-siamo.html">Chi siamo</a>
+      <a href="bnb.html">B&B</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>I nostri B&B</h1>
+    <p>Ospitalità, comfort e posizione ideale</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>I nostri immobili</h2>
+
+    <div class="cards">
+      <div class="card">
+        <img src="img/bnb1.jpg" alt="B&B Centro">
+        <h3>B&B Centro</h3>
+      </div>
+
+      <div class="card">
+        <img src="img/bnb2.jpg" alt="B&B Mare">
+        <h3>B&B Mare</h3>
+      </div>
+
+      <div class="card">
+        <img src="img/bnb3.jpg" alt="B&B Collina">
+        <h3>B&B Collina</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Contattaci</h2>
+
+    <form action="https://formspree.io/f/XXXXX" method="POST">
+      <input type="text" name="name" placeholder="Nome" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Messaggio" required></textarea>
+      <button type="submit">Invia</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 - Tutti i diritti riservati</p>
+  </div>
+</footer>
+
 </body>
 </html>
