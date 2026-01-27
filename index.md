@@ -74,3 +74,39 @@ title: Home
     </div>
   </div>
 </section>
+<section class="faq">
+  <div class="container">
+    <h2>Domande frequenti</h2>
+
+    <div class="accordion-item">
+      <button class="accordion-question">
+        Quali servizi offrite nei B&B?
+        <span class="arrow">▼</span>
+      </button>
+      <div class="accordion-answer">
+        <p>Tutti i nostri B&B offrono Wi-Fi gratuito, colazione inclusa, aria condizionata e biancheria di qualità.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-question">
+        Come posso prenotare?
+        <span class="arrow">▼</span>
+      </button>
+      <div class="accordion-answer">
+        <p>Puoi prenotare direttamente dal nostro sito tramite il form di contatto o via email.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-question">
+        È possibile arrivare in anticipo o posticipare il check-out?
+        <span class="arrow">▼</span>
+      </button>
+      <div class="accordion-answer">
+        <p>Sì, il check-in anticipato o il check-out posticipato sono possibili su richiesta, compatibilmente con le disponibilità.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
