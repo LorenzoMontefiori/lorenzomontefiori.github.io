@@ -14,7 +14,7 @@ title: Home
     </div>
 
     <div class="hero-image">
-      <img src="/img/Immagine1.png" alt="B&B principale">
+      <img src="/img/Immagine1.png" alt="prova testo">
     </div>
   </div>
 </section>
