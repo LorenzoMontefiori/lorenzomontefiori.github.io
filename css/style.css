@@ -10,6 +10,7 @@ body {
   color: #111;
 }
 
+/* CONTAINER */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -17,7 +18,8 @@ body {
 }
 
 /* HEADER + FOOTER */
-header, footer {
+header,
+footer {
   background: #111;
   color: #fff;
   padding: 20px 0;
@@ -32,19 +34,30 @@ header nav a {
 
 footer {
   text-align: center;
-  margin-top: 80px;
+  margin-top: 120px;
+}
+
+/* SPAZIATURA TRA SEZIONI */
+section {
+  margin-bottom: 120px;
 }
 
 /* HERO */
 .hero {
-  padding: 80px 0;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 60px;
   align-items: center;
+}
+
+.hero-text {
+  max-width: 520px;
 }
 
 .hero-text h1 {
@@ -54,25 +67,25 @@ footer {
 
 .hero-text p {
   font-size: 1.1rem;
-  max-width: 500px;
 }
 
 .hero-image img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 14px;
 }
 
 /* QUOTE */
 .quote {
   background: #111;
   color: #fff;
-  padding: 80px 0;
+  padding: 100px 0;
+  margin-bottom: 160px;
   text-align: center;
 }
 
 .quote p {
   font-size: 1.6rem;
-  max-width: 700px;
+  max-width: 750px;
   margin: auto;
   font-style: italic;
 }
@@ -85,25 +98,25 @@ footer {
 .feature-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 60px;
   align-items: center;
 }
 
 .feature-text h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 15px;
 }
 
 .feature-text p {
-  max-width: 500px;
+  max-width: 520px;
 }
 
 .feature-image img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 14px;
 }
 
-/* REVERSE (immagine a sinistra) */
+/* ALTERNANZA IMMAGINI */
 .feature.reverse .feature-grid {
   direction: rtl;
 }
@@ -118,6 +131,10 @@ footer {
   .hero-grid,
   .feature-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
   }
 
   .hero-text h1 {
