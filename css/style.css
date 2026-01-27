@@ -1,175 +1,45 @@
-/* RESET BASE */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin:0; padding:0; }
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #111;
-}
+body { font-family: Arial, sans-serif; line-height:1.6; color:#111; }
 
-/* CONTAINER */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+.container { width:90%; max-width:1200px; margin:auto; }
 
-/* =========================
-   HEADER & FOOTER
-========================= */
-header,
-footer {
-  background-color: #111;
-  color: #fff;
-  padding: 20px 0;
-}
+header, footer { background:#111; color:#fff; padding:20px 0; }
+header nav a { color:#fff; margin-right:20px; text-decoration:none; font-weight:500; }
+footer { text-align:center; margin-top:140px; }
 
-header nav a {
-  color: #fff;
-  margin-right: 20px;
-  text-decoration: none;
-  font-weight: 500;
-}
+section { margin-bottom:120px; }
 
-footer {
-  text-align: center;
-  margin-top: 140px;
-}
+/* HERO */
+.hero { min-height:80vh; display:flex; align-items:center; }
+.hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+.hero-text { max-width:520px; }
+.hero-text h1 { font-size:3rem; margin-bottom:20px; }
+.hero-text p { font-size:1.1rem; }
+.hero-image img { width:100%; border-radius:16px; display:block; }
 
-/* =========================
-   SPAZIO TRA LE SEZIONI
-========================= */
-section {
-  margin-bottom: 120px;
-}
+/* QUOTE */
+.quote { background:#111; color:#fff; padding:120px 0; text-align:center; margin-bottom:160px; }
+.quote p { font-size:1.6rem; max-width:760px; margin:auto; font-style:italic; }
 
-/* =========================
-   HERO
-   testo sinistra / immagine destra
-========================= */
-.hero {
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-}
+/* FEATURE */
+.feature { padding:80px 0; }
+.feature-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+.feature-text { max-width:520px; }
+.feature-text h2 { font-size:2.2rem; margin-bottom:15px; }
+.feature-text p { font-size:1rem; }
+.feature-image img { width:100%; border-radius:16px; display:block; }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.hero-text {
-  max-width: 520px;
-}
-
-.hero-text h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero-text p {
-  font-size: 1.1rem;
-}
-
-.hero-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  display: block;
-}
-
-/* =========================
-   SEZIONE NERA (QUOTE)
-========================= */
-.quote {
-  background-color: #111;
-  color: #fff;
-  padding: 120px 0;
-  text-align: center;
-  margin-bottom: 160px;
-}
-
-.quote p {
-  font-size: 1.6rem;
-  max-width: 760px;
-  margin: 0 auto;
-  font-style: italic;
-}
-
-/* =========================
-   SEZIONI TESTO + IMMAGINE
-========================= */
-.feature {
-  padding: 80px 0;
-}
-
-.feature-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.feature-text {
-  max-width: 520px;
-}
-
-.feature-text h2 {
-  font-size: 2.2rem;
-  margin-bottom: 15px;
-}
-
-.feature-text p {
-  font-size: 1rem;
-}
-
-.feature-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  display: block;
-}
-
-/* =========================
-   ALTERNANZA IMMAGINI
-========================= */
-.feature.reverse .feature-grid {
-  direction: rtl;
-}
-
+/* ALTERNANZA IMMAGINI */
+.feature.reverse .feature-grid { direction: rtl; }
 .feature.reverse .feature-text,
-.feature.reverse .feature-image {
-  direction: ltr;
-}
+.feature.reverse .feature-image { direction:ltr; }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 900px) {
-  .hero-grid,
-  .feature-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero {
-    min-height: auto;
-  }
-
-  .hero-text h1 {
-    font-size: 2.2rem;
-  }
-
-  .quote p {
-    font-size: 1.3rem;
-  }
-
-  section {
-    margin-bottom: 80px;
-  }
+/* RESPONSIVE */
+@media (max-width:900px){
+  .hero-grid, .feature-grid { grid-template-columns:1fr; }
+  .hero { min-height:auto; }
+  .hero-text h1 { font-size:2.2rem; }
+  .quote p { font-size:1.3rem; }
+  section { margin-bottom:80px; }
 }
