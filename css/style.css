@@ -19,7 +19,7 @@ section { margin-bottom:120px; }
 .hero-image img { width:100%; border-radius:16px; display:block; }
 
 /* QUOTE */
-.quote { background:#111; color:#fff; padding:120px 0; text-align:center; margin-bottom:160px; }
+.quote { background:#111; color:#fff; padding:60px 0; text-align:center; margin-bottom:80px; }
 .quote p { font-size:1.6rem; max-width:760px; margin:auto; font-style:italic; }
 
 /* FEATURE */
