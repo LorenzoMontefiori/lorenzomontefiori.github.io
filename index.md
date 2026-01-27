@@ -110,3 +110,20 @@ title: Home
 
   </div>
 </section>
+
+
+<script>
+document.querySelectorAll('.accordion-question').forEach(button => {
+  button.addEventListener('click', () => {
+    const item = button.parentElement;
+
+    // Chiude tutte le altre
+    document.querySelectorAll('.accordion-item').forEach(i => {
+      if(i !== item) i.classList.remove('active');
+    });
+
+    // Toggle apertura/chiusura
+    item.classList.toggle('active');
+  });
+});
+</script>
