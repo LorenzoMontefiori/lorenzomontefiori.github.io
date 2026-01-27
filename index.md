@@ -6,15 +6,19 @@ title: Home
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-text">
-      <h1>Ospitalità autentica,<br>come a casa</h1>
+      <h1>
+        Ospitalità autentica,<br>
+        come a casa
+      </h1>
       <p>
         Scopri i nostri B&B pensati per offrirti comfort,
-        eleganza e una posizione perfetta per il tuo soggiorno.
+        eleganza e una posizione ideale per vivere al meglio
+        il tuo soggiorno.
       </p>
     </div>
 
     <div class="hero-image">
-      <img src="/img/bnb1.jpg" alt="B&B">
+      <img src="/img/bnb1.jpg" alt="B&B principale">
     </div>
   </div>
 </section>
@@ -32,10 +36,12 @@ title: Home
     <div class="feature-text">
       <h2>Nel cuore della città</h2>
       <p>
-        I nostri immobili si trovano in posizioni strategiche,
-        perfette per vivere la città senza rinunciare al relax.
+        Le nostre strutture si trovano in posizioni strategiche,
+        perfette per muoversi comodamente e vivere la città
+        senza rinunciare al relax.
       </p>
     </div>
+
     <div class="feature-image">
       <img src="/img/bnb2.jpg" alt="Posizione centrale">
     </div>
@@ -47,12 +53,14 @@ title: Home
     <div class="feature-text">
       <h2>Comfort e stile</h2>
       <p>
-        Ambienti curati, luminosi e dotati di ogni comfort
-        per garantirti un soggiorno senza pensieri.
+        Ambienti curati nei minimi dettagli, luminosi
+        e dotati di tutti i comfort per garantirti
+        un soggiorno piacevole e senza pensieri.
       </p>
     </div>
+
     <div class="feature-image">
-      <img src="/img/bnb3.jpg" alt="Comfort">
+      <img src="/img/bnb3.jpg" alt="Comfort e design">
     </div>
   </div>
 </section>
@@ -62,12 +70,14 @@ title: Home
     <div class="feature-text">
       <h2>Accoglienza su misura</h2>
       <p>
-        Siamo sempre disponibili per consigliarti,
-        assisterti e rendere il tuo soggiorno davvero speciale.
+        Siamo sempre disponibili per assisterti,
+        consigliarti e rendere il tuo soggiorno
+        davvero speciale, dall’arrivo alla partenza.
       </p>
     </div>
+
     <div class="feature-image">
-      <img src="/img/bnb1.jpg" alt="Accoglienza">
+      <img src="/img/bnb1.jpg" alt="Accoglienza personalizzata">
     </div>
   </div>
 </section>
