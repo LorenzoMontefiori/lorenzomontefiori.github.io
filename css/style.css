@@ -43,3 +43,58 @@ section { margin-bottom:120px; }
   .quote p { font-size:1.3rem; }
   section { margin-bottom:80px; }
 }
+
+/* =========================
+   FAQ / ACCORDION
+========================= */
+.faq {
+  padding: 80px 0;
+  background: #f8f8f8;
+}
+
+.faq h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.accordion-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-question {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 15px 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-question .arrow {
+  transition: transform 0.3s ease;
+}
+
+.accordion-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  font-size: 1rem;
+  padding-left: 0;
+}
+
+.accordion-item.active .accordion-answer {
+  max-height: 300px; /* spazio massimo della risposta */
+  padding: 10px 0;
+}
+
+.accordion-item.active .arrow {
+  transform: rotate(180deg);
+}
+
