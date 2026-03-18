@@ -14,16 +14,16 @@
   <div class="container header-grid">
     <!-- Logo -->
     <div class="header-logo">
-      <a href="#home"><img src="/img/logo.jpg" alt="Logo Azienda"></a>
+      <a href="#top"><img src="/img/logo.jpg" alt="Logo Azienda"></a>
     </div>
 
-    <!-- Menu, bandiere e CTA -->
+    <!-- Menu e CTA -->
     <div class="header-menu-wrapper">
       <nav class="header-menu">
-        <a href="#home" data-key="menu_home">Home</a>
+        <a href="#top" data-key="menu_home">Home</a>
         <a href="#chi-siamo" data-key="menu_chi_siamo">Chi siamo</a>
         <a href="#bnb" data-key="menu_bnb">B&B</a>
-        <a href="#contatti" data-key="menu_contatti">Contatti</a>
+        <!-- Contatti rimosso -->
       </nav>
 
       <!-- Selettore lingua -->
@@ -33,13 +33,13 @@
         <img src="/img/flags/fr.png" class="flag" data-lang="fr" alt="FR">
       </div>
 
-      <a href="#contatti" class="cta-button" data-key="cta_contattaci">Contattaci</a>
+      <a href="#prenota" class="cta-button" data-key="cta_prenota">Prenota</a>
     </div>
   </div>
 </header>
 
 <!-- =========================
-     HOME
+     HERO
 ========================= -->
 <section id="home" class="hero">
   <div class="container hero-grid">
@@ -105,29 +105,6 @@
 </section>
 
 <!-- =========================
-     CONTATTI
-========================= -->
-<section id="contatti" class="feature">
-  <div class="container feature-grid">
-    <div class="feature-text">
-      <h2>Contattaci</h2>
-      <p>
-        Vuoi prenotare o ricevere informazioni? 
-        Scrivici via email o chiamaci, saremo felici di rispondere!
-      </p>
-      <ul>
-        <li>Email: info@tuaazienda.com</li>
-        <li>Telefono: +39 06 1234567</li>
-      </ul>
-    </div>
-
-    <div class="feature-image">
-      <img src="/img/contatti.jpg" alt="Contatti">
-    </div>
-  </div>
-</section>
-
-<!-- =========================
      FAQ
 ========================= -->
 <section class="faq">
@@ -168,6 +145,34 @@
 </section>
 
 <!-- =========================
+     PRENOTA
+========================= -->
+<section id="prenota" class="feature">
+  <div class="container feature-grid">
+    <div class="feature-text">
+      <h2>Prenota</h2>
+      <p>Compila il form sottostante per prenotare il tuo soggiorno o ricevere informazioni.</p>
+      <form class="prenota-form" action="#" method="post">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="messaggio">Messaggio</label>
+        <textarea id="messaggio" name="messaggio" rows="4" required></textarea>
+
+        <button type="submit">Invia</button>
+      </form>
+    </div>
+
+    <div class="feature-image">
+      <img src="/img/contatti.jpg" alt="Prenota">
+    </div>
+  </div>
+</section>
+
+<!-- =========================
      FOOTER
 ========================= -->
 <footer class="site-footer">
@@ -184,10 +189,10 @@
     <div class="footer-links">
       <h3>Collegamenti utili</h3>
       <ul>
-        <li><a href="#home">Home</a></li>
+        <li><a href="#top">Home</a></li>
         <li><a href="#chi-siamo">Chi siamo</a></li>
         <li><a href="#bnb">B&B</a></li>
-        <li><a href="#contatti">Contatti</a></li>
+        <li><a href="#prenota">Prenota</a></li>
       </ul>
     </div>
   </div>
