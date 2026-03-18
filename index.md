@@ -74,6 +74,7 @@ title: Home
     </div>
   </div>
 </section>
+
 <section class="faq">
   <div class="container">
     <h2>Domande frequenti</h2>
@@ -111,6 +112,40 @@ title: Home
   </div>
 </section>
 
+<!-- =========================
+     FOOTER
+========================= -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <!-- Logo -->
+    <div class="footer-logo">
+      <img src="/img/logo.png" alt="Logo Azienda">
+    </div>
+
+    <!-- Informazioni aziendali -->
+    <div class="footer-info">
+      <h3>La nostra azienda</h3>
+      <p>Via Roma 123, 00100 Roma</p>
+      <p>Email: info@tuaazienda.com</p>
+      <p>Telefono: +39 06 1234567</p>
+    </div>
+
+    <!-- Collegamenti alle pagine -->
+    <div class="footer-links">
+      <h3>Collegamenti utili</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/chi-siamo">Chi siamo</a></li>
+        <li><a href="/servizi">Servizi</a></li>
+        <li><a href="/contatti">Contatti</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Tua Azienda. Tutti i diritti riservati.</p>
+  </div>
+</footer>
 
 <script>
 document.querySelectorAll('.accordion-question').forEach(button => {
