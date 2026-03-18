@@ -11,7 +11,7 @@ section { margin-bottom:120px; padding-top:80px; }
 ========================= */
 .site-header { background: #111; color: #fff; padding: 20px 0; position: relative; z-index: 10; }
 .header-grid { display:flex; justify-content:space-between; align-items:center; max-width:1200px; margin:auto; }
-.header-logo img { max-width:100px; }
+.header-logo img { max-width:80px; }
 .header-menu-wrapper { display:flex; align-items:center; gap:15px; }
 .header-menu { display:flex; gap:15px; }
 .header-menu a { color:#fff; text-decoration:none; font-weight:500; transition: color 0.3s; }
