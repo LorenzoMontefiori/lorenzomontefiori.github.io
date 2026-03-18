@@ -1,4 +1,4 @@
-/* HERO FULL BACKGROUND - SISTEMATA */
+/* HERO FULL BACKGROUND */
 .hero {
   height:100vh;
   background-image: url('/img/Immagine1.png');
@@ -23,10 +23,6 @@
   padding: 0 20px;
 }
 
-.hero-content {
-  max-width: 600px;
-}
-
 .hero-content h1 {
   font-size:3rem;
   margin-bottom:20px;
@@ -41,14 +37,6 @@
   font-size:1.1rem;
   padding:12px 25px;
 }
-
-/* Prenota form */
-.prenota-section { padding-bottom:80px; }
-.prenota-form { display:flex; flex-direction:column; gap:10px; margin-top:15px; }
-.prenota-form label { font-weight:600; }
-.prenota-form input, .prenota-form textarea { padding:8px; border-radius:6px; border:1px solid #ccc; width:100%; }
-.prenota-form button { background:#f0a500; border:none; padding:10px 15px; border-radius:6px; color:#111; font-weight:600; cursor:pointer; transition:background 0.3s; }
-.prenota-form button:hover { background:#d18e00; }
 
 /* Responsive */
 @media (max-width:900px){
