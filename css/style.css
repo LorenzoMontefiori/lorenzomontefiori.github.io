@@ -4,13 +4,62 @@ body { font-family: Arial, sans-serif; line-height:1.6; color:#111; }
 
 .container { width:90%; max-width:1200px; margin:auto; }
 
-header, footer { background:#111; color:#fff; padding:20px 0; }
-header nav a { color:#fff; margin-right:20px; text-decoration:none; font-weight:500; }
-footer { margin-top:140px; }
+/* =========================
+   HEADER
+========================= */
+.site-header {
+  background: #111;
+  color: #fff;
+  padding: 20px 0;
+}
 
-section { margin-bottom:120px; }
+.header-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
 
-/* HERO */
+.header-logo img {
+  max-width: 150px;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-menu nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.header-menu nav a:hover {
+  color: #f0a500;
+}
+
+.cta-button {
+  background-color: #f0a500;
+  color: #111;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #d18e00;
+}
+
+/* =========================
+   HERO
+========================= */
 .hero { min-height:80vh; display:flex; align-items:center; }
 .hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
 .hero-text { max-width:520px; }
@@ -18,11 +67,15 @@ section { margin-bottom:120px; }
 .hero-text p { font-size:1.1rem; }
 .hero-image img { width:100%; border-radius:16px; display:block; }
 
-/* QUOTE */
+/* =========================
+   QUOTE
+========================= */
 .quote { background:#111; color:#fff; padding:60px 0; text-align:center; margin-bottom:80px; }
 .quote p { font-size:1.6rem; max-width:760px; margin:auto; font-style:italic; }
 
-/* FEATURE */
+/* =========================
+   FEATURE
+========================= */
 .feature { padding:80px 0; }
 .feature-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
 .feature-text { max-width:520px; }
@@ -34,15 +87,6 @@ section { margin-bottom:120px; }
 .feature.reverse .feature-grid { direction: rtl; }
 .feature.reverse .feature-text,
 .feature.reverse .feature-image { direction:ltr; }
-
-/* RESPONSIVE */
-@media (max-width:900px){
-  .hero-grid, .feature-grid { grid-template-columns:1fr; }
-  .hero { min-height:auto; }
-  .hero-text h1 { font-size:2.2rem; }
-  .quote p { font-size:1.3rem; }
-  section { margin-bottom:80px; }
-}
 
 /* =========================
    FAQ / ACCORDION
@@ -159,8 +203,35 @@ section { margin-bottom:120px; }
   padding-top: 10px;
 }
 
-/* RESPONSIVE FOOTER */
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width:900px){
+  /* HEADER */
+  .header-grid {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .header-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .header-menu nav a {
+    margin-right: 0;
+  }
+
+  /* HERO / FEATURE */
+  .hero-grid, .feature-grid { grid-template-columns:1fr; }
+  .hero { min-height:auto; }
+  .hero-text h1 { font-size:2.2rem; }
+  .quote p { font-size:1.3rem; }
+  section { margin-bottom:80px; }
+
+  /* FOOTER */
   .footer-grid { 
     flex-direction: column; 
     align-items: flex-start; /* colonne impilate, testo sempre a sinistra */
