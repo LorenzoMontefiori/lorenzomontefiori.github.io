@@ -8,6 +8,8 @@ header, footer { background:#111; color:#fff; padding:20px 0; }
 header nav a { color:#fff; margin-right:20px; text-decoration:none; font-weight:500; }
 footer { margin-top:140px; }
 
+section { margin-bottom:120px; }
+
 /* HERO */
 .hero { min-height:80vh; display:flex; align-items:center; }
 .hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
@@ -109,7 +111,7 @@ footer { margin-top:140px; }
 .footer-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-between; /* spaziatura tra colonne */
   gap: 30px;
   max-width: 1200px;
   margin: auto;
@@ -121,6 +123,7 @@ footer { margin-top:140px; }
 
 .footer-info, .footer-links {
   flex: 1 1 200px;
+  text-align: left; /* testo sempre allineato a sinistra */
 }
 
 .footer-info h3, .footer-links h3 {
@@ -158,7 +161,9 @@ footer { margin-top:140px; }
 
 /* RESPONSIVE FOOTER */
 @media (max-width:900px){
-  .footer-grid { flex-direction: column; align-items: center; text-align: center; }
-  .footer-info, .footer-links { flex: unset; }
+  .footer-grid { 
+    flex-direction: column; 
+    align-items: flex-start; /* colonne impilate, testo sempre a sinistra */
+  }
   .footer-logo img { margin-bottom: 20px; }
 }
