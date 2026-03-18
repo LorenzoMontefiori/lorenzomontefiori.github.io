@@ -17,25 +17,23 @@
       <a href="/"><img src="/img/logo.jpg" alt="Logo Azienda"></a>
     </div>
 
-    <!-- Menu, selettore lingua e CTA a destra -->
+    <!-- Menu, bandiere e CTA a destra -->
     <div class="header-menu-wrapper">
       <nav class="header-menu">
-        <a href="/">Home</a>
-        <a href="/chi-siamo">Chi siamo</a>
-        <a href="/bnb">B&B</a>
-        <a href="/contatti">Contatti</a>
+        <a href="/" data-key="menu_home">Home</a>
+        <a href="/chi-siamo" data-key="menu_chi_siamo">Chi siamo</a>
+        <a href="/bnb" data-key="menu_bnb">B&B</a>
+        <a href="/contatti" data-key="menu_contatti">Contatti</a>
       </nav>
 
-      <!-- Selettore lingua con bandiere -->
+      <!-- Selettore lingua a bandiere -->
       <div class="language-selector">
-        <select id="language-select">
-          <option value="it" data-flag="/img/flags/it.png" selected>IT</option>
-          <option value="en" data-flag="/img/flags/en.png">EN</option>
-          <option value="fr" data-flag="/img/flags/fr.png">FR</option>
-        </select>
+        <img src="/img/flags/it.png" class="flag active" data-lang="it" alt="IT">
+        <img src="/img/flags/en.png" class="flag" data-lang="en" alt="EN">
+        <img src="/img/flags/fr.png" class="flag" data-lang="fr" alt="FR">
       </div>
 
-      <a href="/contatti" class="cta-button">Contattaci</a>
+      <a href="/contatti" class="cta-button" data-key="cta_contattaci">Contattaci</a>
     </div>
   </div>
 </header>
@@ -52,96 +50,120 @@
   <div class="container footer-grid">
     <!-- Logo -->
     <div class="footer-logo">
-      <img src="/img/logo.png" alt="Logo Azienda">
+      <img src="/img/logo.jpg" alt="Logo Azienda">
     </div>
 
     <!-- Informazioni aziendali -->
     <div class="footer-info">
-      <h3>La nostra azienda</h3>
-      <p>Via Roma 123, 00100 Roma</p>
-      <p>Email: info@tuaazienda.com</p>
-      <p>Telefono: +39 06 1234567</p>
+      <h3 data-key="footer_azienda">La nostra azienda</h3>
+      <p data-key="footer_indirizzo">Via Roma 123, 00100 Roma</p>
+      <p data-key="footer_email">Email: info@tuaazienda.com</p>
+      <p data-key="footer_telefono">Telefono: +39 06 1234567</p>
     </div>
 
     <!-- Collegamenti alle pagine -->
     <div class="footer-links">
-      <h3>Collegamenti utili</h3>
+      <h3 data-key="footer_link_utili">Collegamenti utili</h3>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/chi-siamo">Chi siamo</a></li>
-        <li><a href="/bnb">B&B</a></li>
-        <li><a href="/contatti">Contatti</a></li>
+        <li><a href="/" data-key="menu_home">Home</a></li>
+        <li><a href="/chi-siamo" data-key="menu_chi_siamo">Chi siamo</a></li>
+        <li><a href="/bnb" data-key="menu_bnb">B&B</a></li>
+        <li><a href="/contatti" data-key="menu_contatti">Contatti</a></li>
       </ul>
     </div>
   </div>
 
   <div class="footer-bottom">
-    <p>&copy; 2026 Tua Azienda. Tutti i diritti riservati.</p>
+    <p data-key="footer_copyright">&copy; 2026 Tua Azienda. Tutti i diritti riservati.</p>
   </div>
 </footer>
 
 <!-- =========================
-     SCRIPT PER SELEZIONE LINGUA
+     SCRIPT TRADUZIONE
 ========================= -->
 <script>
-const languageSelect = document.getElementById('language-select');
+const flags = document.querySelectorAll('.language-selector .flag');
 
-languageSelect.addEventListener('change', function() {
-  const selectedOption = this.options[this.selectedIndex];
-  const flagUrl = selectedOption.dataset.flag;
-
-  // Aggiorna la bandiera di sfondo
-  this.style.backgroundImage = `url('${flagUrl}')`;
-
-  // Traduzioni (solo home)
-  const translations = {
-    en: {
-      home_h1: "Authentic hospitality, like home",
-      home_p: "Discover our B&Bs designed to offer comfort, elegance, and an ideal location.",
-      quote: "Every stay is an experience, not just a night away from home.",
-      feature1_h2: "In the heart of the city",
-      feature1_p: "Strategic locations to enjoy the city without sacrificing tranquility.",
-      feature2_h2: "Comfort and style",
-      feature2_p: "Well-furnished spaces with every comfort for a worry-free stay.",
-      feature3_h2: "Tailored hospitality",
-      feature3_p: "Always available to assist you and make your stay special.",
-      faq_h2: "Frequently Asked Questions",
-      cta_text: "Contact us"
-    },
-    fr: {
-      home_h1: "Hospitalité authentique, comme à la maison",
-      home_p: "Découvrez nos B&B conçus pour offrir confort, élégance et un emplacement idéal.",
-      quote: "Chaque séjour est une expérience, pas seulement une nuit hors de la maison.",
-      feature1_h2: "Au cœur de la ville",
-      feature1_p: "Des emplacements stratégiques pour profiter de la ville sans sacrifier la tranquillité.",
-      feature2_h2: "Confort et style",
-      feature2_p: "Espaces soignés avec tout le confort pour un séjour sans souci.",
-      feature3_h2: "Accueil sur mesure",
-      feature3_p: "Toujours disponible pour vous aider et rendre votre séjour spécial.",
-      faq_h2: "Questions fréquentes",
-      cta_text: "Contactez-nous"
-    }
-  };
-
-  const lang = selectedOption.value;
-  if(lang !== 'it'){
-    document.querySelector('.hero-text h1').textContent = translations[lang].home_h1;
-    document.querySelector('.hero-text p').textContent = translations[lang].home_p;
-    document.querySelector('.quote p').textContent = translations[lang].quote;
-    const features = document.querySelectorAll('.feature-text');
-    features[0].querySelector('h2').textContent = translations[lang].feature1_h2;
-    features[0].querySelector('p').textContent = translations[lang].feature1_p;
-    features[1].querySelector('h2').textContent = translations[lang].feature2_h2;
-    features[1].querySelector('p').textContent = translations[lang].feature2_p;
-    features[2].querySelector('h2').textContent = translations[lang].feature3_h2;
-    features[2].querySelector('p').textContent = translations[lang].feature3_p;
-    document.querySelector('.faq h2').textContent = translations[lang].faq_h2;
-    document.querySelector('.cta-button').textContent = translations[lang].cta_text;
-  } else {
-    location.reload();
+const translations = {
+  en: {
+    menu_home: "Home",
+    menu_chi_siamo: "About us",
+    menu_bnb: "B&B",
+    menu_contatti: "Contact",
+    cta_contattaci: "Contact us",
+    home_h1: "Authentic hospitality, like home",
+    home_p: "Discover our B&Bs designed to offer comfort, elegance, and an ideal location.",
+    quote: "Every stay is an experience, not just a night away from home.",
+    feature1_h2: "In the heart of the city",
+    feature1_p: "Strategic locations to enjoy the city without sacrificing tranquility.",
+    feature2_h2: "Comfort and style",
+    feature2_p: "Well-furnished spaces with every comfort for a worry-free stay.",
+    feature3_h2: "Tailored hospitality",
+    feature3_p: "Always available to assist you and make your stay special.",
+    faq_h2: "Frequently Asked Questions",
+    footer_azienda: "Our company",
+    footer_indirizzo: "Via Roma 123, 00100 Rome",
+    footer_email: "Email: info@yourcompany.com",
+    footer_telefono: "Phone: +39 06 1234567",
+    footer_link_utili: "Useful links",
+    footer_copyright: "© 2026 Your Company. All rights reserved."
+  },
+  fr: {
+    menu_home: "Accueil",
+    menu_chi_siamo: "À propos",
+    menu_bnb: "B&B",
+    menu_contatti: "Contact",
+    cta_contattaci: "Contactez-nous",
+    home_h1: "Hospitalité authentique, comme à la maison",
+    home_p: "Découvrez nos B&B conçus pour offrir confort, élégance et un emplacement idéal.",
+    quote: "Chaque séjour est une expérience, pas seulement une nuit hors de la maison.",
+    feature1_h2: "Au cœur de la ville",
+    feature1_p: "Des emplacements stratégiques pour profiter de la ville sans sacrifier la tranquillité.",
+    feature2_h2: "Confort et style",
+    feature2_p: "Espaces soignés avec tout le confort pour un séjour sans souci.",
+    feature3_h2: "Accueil sur mesure",
+    feature3_p: "Toujours disponible pour vous aider et rendre votre séjour spécial.",
+    faq_h2: "Questions fréquentes",
+    footer_azienda: "Notre entreprise",
+    footer_indirizzo: "Via Roma 123, 00100 Rome",
+    footer_email: "Email: info@yourcompany.com",
+    footer_telefono: "Téléphone: +39 06 1234567",
+    footer_link_utili: "Liens utiles",
+    footer_copyright: "© 2026 Votre entreprise. Tous droits réservés."
   }
+};
+
+flags.forEach(flag => {
+  flag.addEventListener('click', () => {
+    // Toggle bandiere attiva
+    flags.forEach(f => f.classList.remove('active'));
+    flag.classList.add('active');
+    const lang = flag.dataset.lang;
+
+    // Traduci tutte le voci con data-key
+    document.querySelectorAll('[data-key]').forEach(el => {
+      const key = el.dataset.key;
+      if(translations[lang][key]) el.textContent = translations[lang][key];
+    });
+
+    // Traduci contenuti home
+    if(lang !== 'it'){
+      document.querySelector('.hero-text h1').textContent = translations[lang].home_h1;
+      document.querySelector('.hero-text p').textContent = translations[lang].home_p;
+      document.querySelector('.quote p').textContent = translations[lang].quote;
+      const features = document.querySelectorAll('.feature-text');
+      features[0].querySelector('h2').textContent = translations[lang].feature1_h2;
+      features[0].querySelector('p').textContent = translations[lang].feature1_p;
+      features[1].querySelector('h2').textContent = translations[lang].feature2_h2;
+      features[1].querySelector('p').textContent = translations[lang].feature2_p;
+      features[2].querySelector('h2').textContent = translations[lang].feature3_h2;
+      features[2].querySelector('p').textContent = translations[lang].feature3_p;
+      document.querySelector('.faq h2').textContent = translations[lang].faq_h2;
+    } else {
+      location.reload(); // Torna italiano
+    }
+  });
 });
 </script>
-
 </body>
 </html>
