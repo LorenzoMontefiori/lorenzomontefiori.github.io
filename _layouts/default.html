@@ -17,7 +17,7 @@
       <a href="/"><img src="/img/logo.png" alt="Logo Azienda"></a>
     </div>
 
-    <!-- Menu, CTA e selettore lingua a destra -->
+    <!-- Menu, selettore lingua e CTA a destra -->
     <div class="header-menu-wrapper">
       <nav class="header-menu">
         <a href="/">Home</a>
@@ -26,15 +26,16 @@
         <a href="/contatti">Contatti</a>
       </nav>
 
-      <a href="/contatti" class="cta-button">Contattaci</a>
-
+      <!-- Selettore lingua con bandiere -->
       <div class="language-selector">
-        <select>
-          <option value="it" selected>IT</option>
-          <option value="en">EN</option>
-          <option value="fr">FR</option>
+        <select id="language-select">
+          <option value="it" data-flag="/img/flags/it.png" selected>IT</option>
+          <option value="en" data-flag="/img/flags/en.png">EN</option>
+          <option value="fr" data-flag="/img/flags/fr.png">FR</option>
         </select>
       </div>
+
+      <a href="/contatti" class="cta-button">Contattaci</a>
     </div>
   </div>
 </header>
@@ -78,6 +79,69 @@
     <p>&copy; 2026 Tua Azienda. Tutti i diritti riservati.</p>
   </div>
 </footer>
+
+<!-- =========================
+     SCRIPT PER SELEZIONE LINGUA
+========================= -->
+<script>
+const languageSelect = document.getElementById('language-select');
+
+languageSelect.addEventListener('change', function() {
+  const selectedOption = this.options[this.selectedIndex];
+  const flagUrl = selectedOption.dataset.flag;
+
+  // Aggiorna la bandiera di sfondo
+  this.style.backgroundImage = `url('${flagUrl}')`;
+
+  // Traduzioni (solo home)
+  const translations = {
+    en: {
+      home_h1: "Authentic hospitality, like home",
+      home_p: "Discover our B&Bs designed to offer comfort, elegance, and an ideal location.",
+      quote: "Every stay is an experience, not just a night away from home.",
+      feature1_h2: "In the heart of the city",
+      feature1_p: "Strategic locations to enjoy the city without sacrificing tranquility.",
+      feature2_h2: "Comfort and style",
+      feature2_p: "Well-furnished spaces with every comfort for a worry-free stay.",
+      feature3_h2: "Tailored hospitality",
+      feature3_p: "Always available to assist you and make your stay special.",
+      faq_h2: "Frequently Asked Questions",
+      cta_text: "Contact us"
+    },
+    fr: {
+      home_h1: "Hospitalité authentique, comme à la maison",
+      home_p: "Découvrez nos B&B conçus pour offrir confort, élégance et un emplacement idéal.",
+      quote: "Chaque séjour est une expérience, pas seulement une nuit hors de la maison.",
+      feature1_h2: "Au cœur de la ville",
+      feature1_p: "Des emplacements stratégiques pour profiter de la ville sans sacrifier la tranquillité.",
+      feature2_h2: "Confort et style",
+      feature2_p: "Espaces soignés avec tout le confort pour un séjour sans souci.",
+      feature3_h2: "Accueil sur mesure",
+      feature3_p: "Toujours disponible pour vous aider et rendre votre séjour spécial.",
+      faq_h2: "Questions fréquentes",
+      cta_text: "Contactez-nous"
+    }
+  };
+
+  const lang = selectedOption.value;
+  if(lang !== 'it'){
+    document.querySelector('.hero-text h1').textContent = translations[lang].home_h1;
+    document.querySelector('.hero-text p').textContent = translations[lang].home_p;
+    document.querySelector('.quote p').textContent = translations[lang].quote;
+    const features = document.querySelectorAll('.feature-text');
+    features[0].querySelector('h2').textContent = translations[lang].feature1_h2;
+    features[0].querySelector('p').textContent = translations[lang].feature1_p;
+    features[1].querySelector('h2').textContent = translations[lang].feature2_h2;
+    features[1].querySelector('p').textContent = translations[lang].feature2_p;
+    features[2].querySelector('h2').textContent = translations[lang].feature3_h2;
+    features[2].querySelector('p').textContent = translations[lang].feature3_p;
+    document.querySelector('.faq h2').textContent = translations[lang].faq_h2;
+    document.querySelector('.cta-button').textContent = translations[lang].cta_text;
+  } else {
+    location.reload();
+  }
+});
+</script>
 
 </body>
 </html>
