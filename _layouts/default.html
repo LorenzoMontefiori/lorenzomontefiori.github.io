@@ -7,9 +7,6 @@
 </head>
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
 <header class="site-header" id="top">
   <div class="container header-grid">
     <!-- Logo -->
@@ -37,32 +34,26 @@
   </div>
 </header>
 
-<!-- =========================
-     CONTENUTO DELLA PAGINA
-========================= -->
 {{ content }}
 
-<!-- =========================
-     FOOTER
-========================= -->
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-logo">
       <img src="/img/logo.jpg" alt="Logo Azienda">
     </div>
     <div class="footer-info">
-      <h3>La nostra azienda</h3>
-      <p>Via Roma 123, 00100 Roma</p>
-      <p>Email: info@tuaazienda.com</p>
-      <p>Telefono: +39 06 1234567</p>
+      <h3 data-key="footer_title">La nostra azienda</h3>
+      <p data-key="footer_address">Via Roma 123, 00100 Roma</p>
+      <p data-key="footer_email">Email: info@tuaazienda.com</p>
+      <p data-key="footer_phone">Telefono: +39 06 1234567</p>
     </div>
     <div class="footer-links">
-      <h3>Collegamenti utili</h3>
+      <h3 data-key="footer_links_title">Collegamenti utili</h3>
       <ul>
-        <li><a href="#top">Home</a></li>
-        <li><a href="#chi-siamo">Chi siamo</a></li>
-        <li><a href="#bnb">B&B</a></li>
-        <li><a href="#prenota">Prenota</a></li>
+        <li><a href="#top" data-key="menu_home">Home</a></li>
+        <li><a href="#chi-siamo" data-key="menu_chi_siamo">Chi siamo</a></li>
+        <li><a href="#bnb" data-key="menu_bnb">B&B</a></li>
+        <li><a href="#prenota" data-key="cta_prenota">Prenota</a></li>
       </ul>
     </div>
   </div>
@@ -72,12 +63,78 @@
 </footer>
 
 <script>
+  // =========================
   // FAQ accordion
+  // =========================
   document.querySelectorAll('.accordion-question').forEach(button => {
     button.addEventListener('click', () => {
       const item = button.parentElement;
       document.querySelectorAll('.accordion-item').forEach(i => { if(i !== item) i.classList.remove('active'); });
       item.classList.toggle('active');
+    });
+  });
+
+  // =========================
+  // Traduzione lingua
+  // =========================
+  const translations = {
+    en: {
+      menu_home: "Home",
+      menu_chi_siamo: "About Us",
+      menu_bnb: "B&B",
+      cta_prenota: "Book",
+      footer_title: "Our Company",
+      footer_address: "123 Rome Street, 00100 Rome",
+      footer_email: "Email: info@yourcompany.com",
+      footer_phone: "Phone: +39 06 1234567",
+      // FAQ
+      faq_q1: "Which services do you offer in B&Bs?",
+      faq_a1: "All our B&Bs offer free Wi-Fi, breakfast included, air conditioning, and quality linens.",
+      faq_q2: "How can I book?",
+      faq_a2: "You can book directly from our website via the contact form or by email.",
+      faq_q3: "Can I arrive early or leave late?",
+      faq_a3: "Yes, early check-in or late check-out is possible upon request, depending on availability."
+    },
+    fr: {
+      menu_home: "Accueil",
+      menu_chi_siamo: "À propos",
+      menu_bnb: "B&B",
+      cta_prenota: "Réserver",
+      footer_title: "Notre entreprise",
+      footer_address: "123 Rue de Rome, 00100 Rome",
+      footer_email: "Email : info@votreentreprise.com",
+      footer_phone: "Téléphone : +39 06 1234567",
+      // FAQ
+      faq_q1: "Quels services proposez-vous dans les B&B ?",
+      faq_a1: "Tous nos B&B offrent le Wi-Fi gratuit, le petit-déjeuner inclus, la climatisation et du linge de qualité.",
+      faq_q2: "Comment puis-je réserver ?",
+      faq_a2: "Vous pouvez réserver directement depuis notre site via le formulaire de contact ou par e-mail.",
+      faq_q3: "Puis-je arriver tôt ou partir tard ?",
+      faq_a3: "Oui, l'arrivée anticipée ou le départ tardif est possible sur demande, selon les disponibilités."
+    }
+  };
+
+  const flags = document.querySelectorAll('.language-selector .flag');
+  flags.forEach(flag => {
+    flag.addEventListener('click', () => {
+      const lang = flag.dataset.lang;
+      // toggle active class
+      flags.forEach(f => f.classList.remove('active'));
+      flag.classList.add('active');
+
+      // aggiorna testo
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.dataset.key;
+        if(translations[lang][key]) el.textContent = translations[lang][key];
+      });
+
+      // aggiorna FAQ
+      document.querySelectorAll('.accordion-item').forEach((item, i) => {
+        const questions = ['faq_q1','faq_q2','faq_q3'];
+        const answers = ['faq_a1','faq_a2','faq_a3'];
+        item.querySelector('.accordion-question').firstChild.textContent = translations[lang][questions[i]];
+        item.querySelector('.accordion-answer').firstChild.textContent = translations[lang][answers[i]];
+      });
     });
   });
 </script>
