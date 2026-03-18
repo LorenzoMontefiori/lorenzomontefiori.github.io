@@ -3,77 +3,64 @@ layout: default
 title: Home
 ---
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-text">
+<!-- =========================
+     HERO FULL BACKGROUND
+========================= -->
+<section id="home" class="hero">
+  <div class="hero-overlay">
+    <div class="hero-content">
       <h1>Ospitalità autentica,<br>come a casa</h1>
-      <p>
-        Scopri i nostri B&B pensati per offrirti comfort,
-        eleganza e una posizione ideale.
-      </p>
-    </div>
-
-    <div class="hero-image">
-      <img src="/img/Immagine1.png" alt="prova testo">
+      <p>Scopri i nostri B&B pensati per offrirti comfort, eleganza e una posizione ideale.</p>
+      <a href="#prenota" class="cta-button">Prenota</a>
     </div>
   </div>
 </section>
 
+<!-- =========================
+     QUOTE
+========================= -->
 <section class="quote">
   <div class="container">
-    <p>
-      “Ogni soggiorno è un’esperienza, non solo una notte fuori casa.”
-    </p>
+    <p>“Ogni soggiorno è un’esperienza, non solo una notte fuori casa.”</p>
   </div>
 </section>
 
-<section class="feature">
+<!-- =========================
+     CHI SIAMO
+========================= -->
+<section id="chi-siamo" class="feature">
   <div class="container feature-grid">
     <div class="feature-text">
-      <h2>Nel cuore della città</h2>
-      <p>
-        Posizioni strategiche per vivere la città
-        senza rinunciare alla tranquillità.
-      </p>
+      <h2>Chi siamo</h2>
+      <p>Siamo un team appassionato di ospitalità che crede
+         nell'offrire esperienze autentiche e personalizzate.
+         Ogni B&B è curato nei minimi dettagli per farvi sentire come a casa.</p>
     </div>
-
     <div class="feature-image">
-      <img src="/img/bnb2.jpg" alt="">
+      <img src="/img/chi-siamo.jpg" alt="Chi siamo">
     </div>
   </div>
 </section>
 
-<section class="feature reverse">
+<!-- =========================
+     B&B
+========================= -->
+<section id="bnb" class="feature reverse">
   <div class="container feature-grid">
     <div class="feature-text">
-      <h2>Comfort e stile</h2>
-      <p>
-        Ambienti curati e dotati di ogni comfort
-        per un soggiorno senza pensieri.
-      </p>
+      <h2>I nostri B&B</h2>
+      <p>Ambienti eleganti, confortevoli e dotati di tutti i servizi,
+         per garantirvi un soggiorno indimenticabile in città o in relax.</p>
     </div>
-
     <div class="feature-image">
-      <img src="/img/bnb3.jpg" alt="">
+      <img src="/img/bnb2.jpg" alt="B&B">
     </div>
   </div>
 </section>
 
-<section class="feature">
-  <div class="container feature-grid">
-    <div class="feature-text">
-      <h2>Accoglienza su misura</h2>
-      <p>
-        Sempre disponibili per assisterti
-        e rendere il tuo soggiorno speciale.
-      </p>
-    </div>
-
-    <div class="feature-image">
-      <img src="/img/bnb1.jpg" alt="">
-    </div>
-  </div>
-</section>
+<!-- =========================
+     FAQ
+========================= -->
 <section class="faq">
   <div class="container">
     <h2>Domande frequenti</h2>
@@ -111,19 +98,29 @@ title: Home
   </div>
 </section>
 
+<!-- =========================
+     PRENOTA
+========================= -->
+<section id="prenota" class="feature">
+  <div class="container feature-grid">
+    <div class="feature-text">
+      <h2>Prenota</h2>
+      <p>Compila il form sottostante per prenotare il tuo soggiorno o ricevere informazioni.</p>
+      <form class="prenota-form" action="#" method="post">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required>
 
-<script>
-document.querySelectorAll('.accordion-question').forEach(button => {
-  button.addEventListener('click', () => {
-    const item = button.parentElement;
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
 
-    // Chiude tutte le altre
-    document.querySelectorAll('.accordion-item').forEach(i => {
-      if(i !== item) i.classList.remove('active');
-    });
+        <label for="messaggio">Messaggio</label>
+        <textarea id="messaggio" name="messaggio" rows="4" required></textarea>
 
-    // Toggle apertura/chiusura
-    item.classList.toggle('active');
-  });
-});
-</script>
+        <button type="submit">Invia</button>
+      </form>
+    </div>
+    <div class="feature-image">
+      <img src="/img/contatti.jpg" alt="Prenota">
+    </div>
+  </div>
+</section>
