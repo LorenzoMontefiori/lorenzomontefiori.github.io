@@ -12,158 +12,202 @@
 ========================= -->
 <header class="site-header">
   <div class="container header-grid">
-    <!-- Logo a sinistra -->
+    <!-- Logo -->
     <div class="header-logo">
-      <a href="/"><img src="/img/logo.jpg" alt="Logo Azienda"></a>
+      <a href="#home"><img src="/img/logo.jpg" alt="Logo Azienda"></a>
     </div>
 
-    <!-- Menu, bandiere e CTA a destra -->
+    <!-- Menu, bandiere e CTA -->
     <div class="header-menu-wrapper">
       <nav class="header-menu">
-        <a href="/" data-key="menu_home">Home</a>
-        <a href="/chi-siamo" data-key="menu_chi_siamo">Chi siamo</a>
-        <a href="/bnb" data-key="menu_bnb">B&B</a>
-        <a href="/contatti" data-key="menu_contatti">Contatti</a>
+        <a href="#home" data-key="menu_home">Home</a>
+        <a href="#chi-siamo" data-key="menu_chi_siamo">Chi siamo</a>
+        <a href="#bnb" data-key="menu_bnb">B&B</a>
+        <a href="#contatti" data-key="menu_contatti">Contatti</a>
       </nav>
 
-      <!-- Selettore lingua a bandiere -->
+      <!-- Selettore lingua -->
       <div class="language-selector">
         <img src="/img/flags/it.png" class="flag active" data-lang="it" alt="IT">
         <img src="/img/flags/en.png" class="flag" data-lang="en" alt="EN">
         <img src="/img/flags/fr.png" class="flag" data-lang="fr" alt="FR">
       </div>
 
-      <a href="/contatti" class="cta-button" data-key="cta_contattaci">Contattaci</a>
+      <a href="#contatti" class="cta-button" data-key="cta_contattaci">Contattaci</a>
     </div>
   </div>
 </header>
 
 <!-- =========================
-     CONTENT
+     HOME
 ========================= -->
-{{ content }}
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <h1>Ospitalità autentica,<br>come a casa</h1>
+      <p>
+        Scopri i nostri B&B pensati per offrirti comfort,
+        eleganza e una posizione ideale.
+      </p>
+    </div>
+
+    <div class="hero-image">
+      <img src="/img/Immagine1.png" alt="prova testo">
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="container">
+    <p>
+      “Ogni soggiorno è un’esperienza, non solo una notte fuori casa.”
+    </p>
+  </div>
+</section>
+
+<!-- =========================
+     CHI SIAMO
+========================= -->
+<section id="chi-siamo" class="feature">
+  <div class="container feature-grid">
+    <div class="feature-text">
+      <h2>Chi siamo</h2>
+      <p>
+        Siamo un team appassionato di ospitalità che crede
+        nell'offrire esperienze autentiche e personalizzate.
+        Ogni B&B è curato nei minimi dettagli per farvi sentire come a casa.
+      </p>
+    </div>
+
+    <div class="feature-image">
+      <img src="/img/chi-siamo.jpg" alt="Chi siamo">
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     B&B
+========================= -->
+<section id="bnb" class="feature reverse">
+  <div class="container feature-grid">
+    <div class="feature-text">
+      <h2>I nostri B&B</h2>
+      <p>
+        Ambienti eleganti, confortevoli e dotati di tutti i servizi,
+        per garantirvi un soggiorno indimenticabile in città o in relax.
+      </p>
+    </div>
+
+    <div class="feature-image">
+      <img src="/img/bnb2.jpg" alt="B&B">
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     CONTATTI
+========================= -->
+<section id="contatti" class="feature">
+  <div class="container feature-grid">
+    <div class="feature-text">
+      <h2>Contattaci</h2>
+      <p>
+        Vuoi prenotare o ricevere informazioni? 
+        Scrivici via email o chiamaci, saremo felici di rispondere!
+      </p>
+      <ul>
+        <li>Email: info@tuaazienda.com</li>
+        <li>Telefono: +39 06 1234567</li>
+      </ul>
+    </div>
+
+    <div class="feature-image">
+      <img src="/img/contatti.jpg" alt="Contatti">
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     FAQ
+========================= -->
+<section class="faq">
+  <div class="container">
+    <h2>Domande frequenti</h2>
+
+    <div class="accordion-item">
+      <button class="accordion-question">
+        Quali servizi offrite nei B&B?
+        <span class="arrow">▼</span>
+      </button>
+      <div class="accordion-answer">
+        <p>Tutti i nostri B&B offrono Wi-Fi gratuito, colazione inclusa, aria condizionata e biancheria di qualità.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-question">
+        Come posso prenotare?
+        <span class="arrow">▼</span>
+      </button>
+      <div class="accordion-answer">
+        <p>Puoi prenotare direttamente dal nostro sito tramite il form di contatto o via email.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-question">
+        È possibile arrivare in anticipo o posticipare il check-out?
+        <span class="arrow">▼</span>
+      </button>
+      <div class="accordion-answer">
+        <p>Sì, il check-in anticipato o il check-out posticipato sono possibili su richiesta, compatibilmente con le disponibilità.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <!-- =========================
      FOOTER
 ========================= -->
 <footer class="site-footer">
   <div class="container footer-grid">
-    <!-- Logo -->
     <div class="footer-logo">
       <img src="/img/logo.jpg" alt="Logo Azienda">
     </div>
-
-    <!-- Informazioni aziendali -->
     <div class="footer-info">
-      <h3 data-key="footer_azienda">La nostra azienda</h3>
-      <p data-key="footer_indirizzo">Via Roma 123, 00100 Roma</p>
-      <p data-key="footer_email">Email: info@tuaazienda.com</p>
-      <p data-key="footer_telefono">Telefono: +39 06 1234567</p>
+      <h3>La nostra azienda</h3>
+      <p>Via Roma 123, 00100 Roma</p>
+      <p>Email: info@tuaazienda.com</p>
+      <p>Telefono: +39 06 1234567</p>
     </div>
-
-    <!-- Collegamenti alle pagine -->
     <div class="footer-links">
-      <h3 data-key="footer_link_utili">Collegamenti utili</h3>
+      <h3>Collegamenti utili</h3>
       <ul>
-        <li><a href="/" data-key="menu_home">Home</a></li>
-        <li><a href="/chi-siamo" data-key="menu_chi_siamo">Chi siamo</a></li>
-        <li><a href="/bnb" data-key="menu_bnb">B&B</a></li>
-        <li><a href="/contatti" data-key="menu_contatti">Contatti</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#chi-siamo">Chi siamo</a></li>
+        <li><a href="#bnb">B&B</a></li>
+        <li><a href="#contatti">Contatti</a></li>
       </ul>
     </div>
   </div>
-
   <div class="footer-bottom">
-    <p data-key="footer_copyright">&copy; 2026 Tua Azienda. Tutti i diritti riservati.</p>
+    <p>&copy; 2026 Tua Azienda. Tutti i diritti riservati.</p>
   </div>
 </footer>
 
 <!-- =========================
-     SCRIPT TRADUZIONE
+     SCRIPT FAQ
 ========================= -->
 <script>
-const flags = document.querySelectorAll('.language-selector .flag');
-
-const translations = {
-  en: {
-    menu_home: "Home",
-    menu_chi_siamo: "About us",
-    menu_bnb: "B&B",
-    menu_contatti: "Contact",
-    cta_contattaci: "Contact us",
-    home_h1: "Authentic hospitality, like home",
-    home_p: "Discover our B&Bs designed to offer comfort, elegance, and an ideal location.",
-    quote: "Every stay is an experience, not just a night away from home.",
-    feature1_h2: "In the heart of the city",
-    feature1_p: "Strategic locations to enjoy the city without sacrificing tranquility.",
-    feature2_h2: "Comfort and style",
-    feature2_p: "Well-furnished spaces with every comfort for a worry-free stay.",
-    feature3_h2: "Tailored hospitality",
-    feature3_p: "Always available to assist you and make your stay special.",
-    faq_h2: "Frequently Asked Questions",
-    footer_azienda: "Our company",
-    footer_indirizzo: "Via Roma 123, 00100 Rome",
-    footer_email: "Email: info@yourcompany.com",
-    footer_telefono: "Phone: +39 06 1234567",
-    footer_link_utili: "Useful links",
-    footer_copyright: "© 2026 Your Company. All rights reserved."
-  },
-  fr: {
-    menu_home: "Accueil",
-    menu_chi_siamo: "À propos",
-    menu_bnb: "B&B",
-    menu_contatti: "Contact",
-    cta_contattaci: "Contactez-nous",
-    home_h1: "Hospitalité authentique, comme à la maison",
-    home_p: "Découvrez nos B&B conçus pour offrir confort, élégance et un emplacement idéal.",
-    quote: "Chaque séjour est une expérience, pas seulement une nuit hors de la maison.",
-    feature1_h2: "Au cœur de la ville",
-    feature1_p: "Des emplacements stratégiques pour profiter de la ville sans sacrifier la tranquillité.",
-    feature2_h2: "Confort et style",
-    feature2_p: "Espaces soignés avec tout le confort pour un séjour sans souci.",
-    feature3_h2: "Accueil sur mesure",
-    feature3_p: "Toujours disponible pour vous aider et rendre votre séjour spécial.",
-    faq_h2: "Questions fréquentes",
-    footer_azienda: "Notre entreprise",
-    footer_indirizzo: "Via Roma 123, 00100 Rome",
-    footer_email: "Email: info@yourcompany.com",
-    footer_telefono: "Téléphone: +39 06 1234567",
-    footer_link_utili: "Liens utiles",
-    footer_copyright: "© 2026 Votre entreprise. Tous droits réservés."
-  }
-};
-
-flags.forEach(flag => {
-  flag.addEventListener('click', () => {
-    // Toggle bandiere attiva
-    flags.forEach(f => f.classList.remove('active'));
-    flag.classList.add('active');
-    const lang = flag.dataset.lang;
-
-    // Traduci tutte le voci con data-key
-    document.querySelectorAll('[data-key]').forEach(el => {
-      const key = el.dataset.key;
-      if(translations[lang][key]) el.textContent = translations[lang][key];
-    });
-
-    // Traduci contenuti home
-    if(lang !== 'it'){
-      document.querySelector('.hero-text h1').textContent = translations[lang].home_h1;
-      document.querySelector('.hero-text p').textContent = translations[lang].home_p;
-      document.querySelector('.quote p').textContent = translations[lang].quote;
-      const features = document.querySelectorAll('.feature-text');
-      features[0].querySelector('h2').textContent = translations[lang].feature1_h2;
-      features[0].querySelector('p').textContent = translations[lang].feature1_p;
-      features[1].querySelector('h2').textContent = translations[lang].feature2_h2;
-      features[1].querySelector('p').textContent = translations[lang].feature2_p;
-      features[2].querySelector('h2').textContent = translations[lang].feature3_h2;
-      features[2].querySelector('p').textContent = translations[lang].feature3_p;
-      document.querySelector('.faq h2').textContent = translations[lang].faq_h2;
-    } else {
-      location.reload(); // Torna italiano
-    }
+document.querySelectorAll('.accordion-question').forEach(button => {
+  button.addEventListener('click', () => {
+    const item = button.parentElement;
+    document.querySelectorAll('.accordion-item').forEach(i => { if(i !== item) i.classList.remove('active'); });
+    item.classList.toggle('active');
   });
 });
 </script>
+
 </body>
 </html>
