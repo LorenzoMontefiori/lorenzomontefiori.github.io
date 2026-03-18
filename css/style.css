@@ -28,7 +28,7 @@ body { font-family: Arial, sans-serif; line-height:1.6; color:#111; }
 .header-menu-wrapper {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .header-menu {
@@ -43,9 +43,7 @@ body { font-family: Arial, sans-serif; line-height:1.6; color:#111; }
   transition: color 0.3s ease;
 }
 
-.header-menu a:hover {
-  color: #f0a500;
-}
+.header-menu a:hover { color: #f0a500; }
 
 .cta-button {
   background-color: #f0a500;
@@ -57,21 +55,24 @@ body { font-family: Arial, sans-serif; line-height:1.6; color:#111; }
   transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
-  background-color: #d18e00;
-}
+.cta-button:hover { background-color: #d18e00; }
 
 /* =========================
    LANGUAGE SELECTOR
 ========================= */
 .language-selector select {
-  padding: 6px 10px;
+  padding: 6px 30px 6px 40px;
   border-radius: 5px;
   border: none;
   background-color: #f0a500;
   color: #111;
   font-weight: 600;
   cursor: pointer;
+  appearance: none;
+  background-image: url('/img/flags/it.png');
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 24px 24px;
   transition: background-color 0.3s ease;
 }
 
